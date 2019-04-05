@@ -1,0 +1,64 @@
+Info:
+!!! It is important to notice that we assume you should have logged in when you browse the other pages other than index.html, login.html and sign_up.html for phase1, so all the other pages are showing your account info at the top right corner!!!
+
+* For restaurant review page:
+	-file used: 1. CSS: review_page.css
+				2. review_page.html, review_page.js (page for reading and writing a review)
+
+* For individual account page: 
+	-file used: 1. CSS: account.css
+			   	2. individual_account.html, individual_account.js (my reviews page)
+			   	3. individual_favourite.html, individual_favourite.js (my favourites page)
+			   	4. individual_setting.html, individual_setting.js (individual account setting page)
+
+* For restaurant account page: 
+    -file used: 1. CSS: account.css
+                2. restaurant_account.html, restaurant_account.js (All reviews page)
+                3. restaurant_myRes.html, restaurant_myRes.js (My restaurants page)
+                4. restaurant_setting.html, individual_setting.js (restaurant account setting page)
+		
+*For admin account page:
+ -file used: 1. CSS: account.css
+                2. individual_account_adminView_banUser.html, individual_account_adminView_comments.html ,   individual_account_adminView_restaurants.html, individual_account_adminView_banUser.js
+
+*For log in/sign up page:
+-file used 1. css: login_style.css
+           2. login.html, login.js
+	   3. sign_up.html, sign_up.js
+	   
+home page:
+     1. index.html, index.js, index.css, index_user.html
+
+search result:
+     1. restaurants_search_result.html, search_result.css, search_result.js
+
+
+Instructions:
+* For restaurant review page: We have made an example of a restaurant's main page called McDonald's. 
+
+* For regular user:
+      username: user
+      password: user
+      
+      Start with index.html, and log into user account. After logging in as a user, the home page should show your username and profile picture at the top right corner.  
+      On the home page, if you click on the "Fast Food", it will bring you to the search result page with McDonald's as the search result. If you click on different food category or location links, it would show you different restaurants that satisfy the condition. You can click on the Mcdonald's link and it would open up the restaurant page for McDonald's. You can browse the information, read and write review of the restaurant and add the restaurant to your favourite there. You can always click on the logo of the navigation bar and bring you back to the home page. The search function is not working yet since it requires server part works. Notice that for phase1, we only make the search result for "Fast Food" and McDonald's restaurant page to prove our understanding of front end, so clicking the other links wouldn't work for now. Once our server part works are done, clicking the other links would automatically build up the page you want for you. For "Popular Restaurants" section in home page, if you pull down the dropdown button, you can select the location and view the popular restaurant at the location you choose. For now, if you switch to Markham, it would show "Osaka Sushi", but once again, clicking the link wouldn't work since we haven't hardcoded the restaurant page for "Osaka Sushi" for phase1, but you should see our ideas.  
+      
+      If you click on the profile image at the top right corner on the nav bar, you should be navigated to your account page. You can see all the reviews you made, your favourite restaurants, and you can always edit your account information here. There is a sort function for the pages of my reviews and my favourite, so you can sort the restaurants in the order you choose. Search result page also has the same function. Also, for reviews and favourite pages, we set the maximum results that each page can show to be three, if you want to see more results, you can click the previous and next page button which are at the bottom of the page to switch to other pages. Moreover, for the account setting page, you can see the current account information, and if you want to change your user name, email address, password or your profile picture, you can click the edit button to edit. You can choose to edit all of the fields or only some of them, and after you finish editing, you can click save, and then all the changes you made will show up on that page. 
+
+* For admin:
+      username: admin
+      password: admin
+      
+      For admin, after you log in, you would be directed to admin account page and this is the view of admin. The admin can't go to other page other than the admin account page because he can access or the information and do all his jobs here. 
+      1. He can ban/recover users. When a user is banned, he is restricted to log in his account. We decide to take away delete users, change user's password/username from the proposal since it is unnecessary. 
+      2. He can delete comments. There is a remove button on every comment, if the admin click it, the comment would be removed
+      3. He can remove restaurants as well.
+      
+* For restaurant user:
+      username: user2
+      password: user2
+
+      1.For user2, you will login to the restaurant account page that you can view all reviews from your restaurants at All reviews page, you can also sort the reviews by click the sort by name or rate in up-right corner. You can change page by click the buttons at the down-right corner. 
+      2.At My restaurants page, you can view all your restaurants and you can edit them or remove them by click the buttons in each restaurant content. If you want to add a new restaurant, you can do so by click the button at top-left corner. By clicking 'add new' or 'edit' button, you will entry restaurant editing page that you can edit all information of your restaurant and click save to submit or cancel to exist back to review page.
+      3.The setting page of user2 is pretty same as setting page of user.
+      4.For all these three pages, you can click log out at top right corner to go back to index page. Since user2 is a restaurant owner account, it cannot go to restaurant page to write review.

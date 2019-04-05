@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>Home Page</title>
+
+  <!-- Bootstrap core CSS -->
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="./css/index.css" rel="stylesheet">
+  <link href="./css/account.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <div class="container-fluid">
+    <div id="header" class="row p-3 bg-danger text-white">
+        <!-- logo part -->
+        <div class="col-md-5">
+          <div class="logoContainer">
+              <a href="/">
+                <img src="./img/logo.png" class="float-left img-thumbnail" alt="logo Picture"/>
+                <span class="logo text-dark">Restaurant Rev.</span>
+              </a>
+          </div>
+        </div>
+        <!-- search part -->
+        <div class="col-md-4">
+        </div>
+        <!-- portrait part -->
+        <div class="col-md-1">
+              <div id="portraitContainer">
+              </div>
+        </div>
+        <!-- user name part -->
+        <div class="col-md-1">
+          <a id = "loginOrUsername"></a>
+        </div>
+        <!-- sign out part -->
+        <div id = "signInOut" class=" col-md-1">
+          <a id = "signInOutLink"></a>
+        </div>
+    </div>
+</div>
+
+  
+  <!-- Page Content -->
+  <div id= "pageContent" class="container">
+
+    <form id = "searchBar" action = "/searchRestaurants/resName/" method = "get" class="input-group border border-danger mb-5">
+      <input id="searchInput" class="form-control" type="text" name="content" placeholder="Search Restaurants Names">
+      <div class="input-group-append">
+        <a id = "searchButtonLink"><button class="btn btn-danger" type="submit"><i class="fas fa-search text-white"></i></button></a> 
+      </div>
+    </form>
+
+    <div id = "catogoriesAndPromotions" class="row">
+
+      <div class="col-lg-3">
+
+        <h3 class = "display-4">Food Catogories</h3>
+        <div class="list-group">
+            <form action = "/searchRestaurants/category/Fast food/homePage" method = "get">
+              <input type = "submit" value = "Fast food" class="list-group-item list-group-item-action list-group-item-light"></input>
+            </form>
+
+          <form action = "/searchRestaurants/category/Chinese/homePage" method = "get">
+            <input type = "submit" value = "Chinese" class="list-group-item list-group-item-action list-group-item-light"></input>
+          </form>
+
+          <form action = "/searchRestaurants/category/Japanese/homePage" method = "get">
+            <input type = "submit" value = "Japanese" class="list-group-item list-group-item-action list-group-item-light"></input>
+          </form>
+
+          <form action = "/searchRestaurants/category/Korean/homePage" method = "get">
+            <input type = "submit" value = "Korean" class="list-group-item list-group-item-action list-group-item-light"></input>
+          </form>
+
+          <form action = "/searchRestaurants/category/American/homePage" method = "get">
+            <input type = "submit" value = "American" class="list-group-item list-group-item-action list-group-item-light"></input>
+          </form>
+
+        </div>
+
+      </div>
+
+      
+
+      <div id = "restaurantsPromoteSection"class="col-lg-9 float-right">
+
+        <div id="imageSlide" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#imageSlide" data-slide-to="0" class="active"></li>
+            <li data-target="#imageSlide" data-slide-to="1"></li>
+            <li data-target="#imageSlide" data-slide-to="2"></li>
+          </ul>
+        
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="promoteImg carousel-item active">
+              <!-- <img src="https://moneydotcomvip.files.wordpress.com/2015/01/150129_em_mcdproblems.jpg" alt="McDonald1"> -->
+            </div>
+            <div class="promoteImg carousel-item">
+              <!-- <img class = "slideImage" src="https://cdn.cnn.com/cnnnext/dam/assets/181024134631-01-mcdonalds-triple-breakfast-stacks-exlarge-169.jpg" alt="McDonald2"> -->
+            </div>
+            <div class="promoteImg carousel-item">
+              <!-- <img class = "slideImage" src="http://markhamosakasushi.ca/wp-content/uploads/Traythum.jpg" alt="OsakaSushi"> -->
+            </div>
+          </div>
+        
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#imageSlide" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#imageSlide" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        
+        </div>
+
+        <div class="d-flex mt-5">
+          <div class="mr-3">
+            <h3>Popular Restaurants</h3>
+          </div>
+          <div class="dropdown">
+              <button id = "dropDownButton" type="button" class="btn bg-danger btn-primary dropdown-toggle" data-toggle="dropdown">Downtown-Toronto</button>
+              <div class="dropdown-menu">
+                <a id = "dropdownToronto" class="dropdown-item" href="#dropDownButton">Downtown-Toronto</a>
+                <a id = "dropdownMarkham" class="dropdown-item" href="#dropDownButton">Markham</a>
+              </div>
+          </div>
+          
+        </div>
+
+        <div id = "popularRestaurants" class="row mt-3">
+        </div>
+   
+
+      </div>
+  
+
+    </div>
+ 
+
+  </div>
+  
+  </footer>
+
+
+</body>
+
+<script type="module" src="./js/index.js"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+
+</html>
